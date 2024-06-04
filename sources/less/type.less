@@ -1,0 +1,890 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6, .terms-list dt {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  // line-height: @headings-line-height;
+  color: @headings-color;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1, .h1 {
+  font-size: @font-size-h1;
+  line-height: @font-lh-h1;
+  color: @brand-primary;
+  font-weight: 700;
+
+  // @media (max-width: 767px){  
+  // }
+  small,
+  .small {
+    font-weight: 400;
+    display: block;
+    font-size: 21px;
+    line-height: 18px;
+    text-align: center;
+  }
+}
+
+h2, .h2 {
+  font-size: @font-size-h2;
+  line-height: @font-lh-h2;
+  // small{
+  // }
+  color: @brand-primary;
+  font-weight: 700;
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 50px;
+  }
+  @media (max-width: 767px) {
+    font-size: 48px;
+  }
+}
+
+h3, .h3 {
+  font-size: @font-size-h3;
+  line-height: @font-lh-h3;
+  font-weight: 700;
+  // small{
+  // }
+}
+
+h4, .h4 {
+  font-size: @font-size-h4;
+  line-height: @font-lh-h4;
+}
+
+h5, .h5, .terms-list dt {
+  font-size: @font-size-h5;
+  line-height: @font-lh-h5;
+  font-weight: 700;
+}
+
+h6, .h6 {
+  font-size: @font-size-h6;
+  line-height: @font-lh-h6;
+  color: @brand-primary;
+}
+
+// Body text
+// -------------------------
+
+p {
+  line-height: @line-height-base;
+  margin: 0;
+}
+
+.lead {
+
+}
+
+// Main Layout
+// -----------------------
+* + .row {
+  margin-top: 25px;
+}
+
+* + .contact {
+  margin-top: 16px;
+}
+
+* + .inline-list {
+  margin-top: 21px;
+}
+
+* + .terms-list {
+  margin-top: 18px;
+}
+
+* + h5 {
+  margin-top: 12px;
+}
+
+* + h6 {
+  margin-top: 17px;
+}
+
+h5 + p {
+  margin-top: 6px;
+}
+
+h6 + p {
+  margin-top: 16px;
+}
+
+.icon-fa + h5 {
+  margin-top: 13px;
+}
+
+img + h4 {
+  margin-top: 12px;
+}
+
+img + h3 {
+  margin-top: 26px;
+}
+
+/////////////////////////////////////////
+.row + .btn {
+  margin-top: 28px;
+}
+
+p + a[href^="mailto:"] {
+  margin-top: 20px;
+}
+
+p + p {
+  margin-top: 16px;
+}
+
+p + img {
+  margin-top: 10px;
+}
+
+p + .btn {
+  margin-top: 16px;
+}
+
+p + h4 {
+  margin-top: 20px;
+}
+
+h2 + p {
+  margin-top: 15px;
+}
+
+h3 + p {
+  margin-top: 16px;
+}
+
+h3 + h4 {
+  margin-top: 17px;
+}
+
+h4 + p {
+  margin-top: 10px;
+}
+
+* + .mail {
+  margin-top: 30px;
+}
+
+* + .item-list {
+  margin-top: 23px;
+}
+
+* + .offset {
+  &-1 {
+    margin-top: 17px;
+  }
+
+  &-2 {
+    margin-top: 8px;
+  }
+
+  &-3 {
+    margin-top: 22px;
+  }
+}
+
+// FA
+// -----------------------
+
+.fa {
+  line-height: inherit;
+}
+
+[class*='fa-'] {
+  &:before {
+    font-family: @fa;
+    color: inherit;
+  }
+}
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small,
+.small {
+  // font-size: floor((100% * @font-size-small / @font-size-base));
+  // font-size: inherit;
+}
+
+mark,
+.mark {
+  background-color: @brand-warning;
+  padding: .2em;
+}
+
+// Alignment
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.center767 {
+  @media (max-width: 767px) {
+    text-align: center;
+    * {
+      text-align: center;
+    }
+  }
+}
+
+.center991 {
+  @media (max-width: 991px) {
+    text-align: center;
+    * {
+      text-align: center;
+    }
+  }
+}
+
+.left767 {
+  @media (max-width: 767px) {
+    text-align: left;
+    * {
+      text-align: left;
+    }
+  }
+}
+
+.left991 {
+  @media (max-width: 991px) {
+    text-align: left;
+    * {
+      text-align: left;
+    }
+  }
+}
+
+.right767 {
+  @media (max-width: 767px) {
+    text-align: right;
+    * {
+      text-align: right;
+    }
+  }
+}
+
+.right991 {
+  @media (max-width: 991px) {
+    text-align: right;
+    * {
+      text-align: right;
+    }
+  }
+}
+
+// Transformation
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.fw-l {
+  font-weight: 300;
+}
+
+.fw-n {
+  font-weight: 400;
+}
+
+.fw-m {
+  font-weight: 500;
+}
+
+.fw-sb {
+  font-weight: 600;
+}
+
+.fw-b {
+  font-weight: 700;
+}
+
+.fw-xb {
+  font-weight: 800;
+}
+
+.white {
+  color: @white-clr;
+}
+
+.txt-sec {
+  color: @secondary-clr;
+}
+
+// Contextual colors
+.text-muted {
+  color: @text-muted;
+}
+
+.text-primary {
+  color: @brand-primary;
+  a:hover {
+    color: @default-darker;
+  }
+}
+
+.text-success {
+  color: @brand-success;
+}
+
+.text-info {
+  color: @brand-info;
+}
+
+.text-warning {
+  color: @brand-warning;
+}
+
+.text-danger {
+  color: @brand-danger;
+}
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+  color: #fff;
+  background: @brand-primary;
+  // .bg-variant(@brand-primary);
+  .btn-default {
+    .button-variant(@white-clr; @brand-primary; @white-clr);
+    &:focus {
+      .button-variant(@white-clr; @brand-primary; @white-clr);
+    }
+
+    &:hover {
+      .button-variant(@brand-primary; @white-clr; @white-clr);
+    }
+  }
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-dark {
+  background: #1c1c1c;
+  position: relative;
+  overflow: hidden;
+
+  h1, h2, h3, h4, h5 {
+    color: #fff;
+  }
+
+  color: #fff;
+
+  h6 {
+    color: @brand-primary;
+  }
+
+  p {
+    color: #888888;
+  }
+}
+
+.bg-secondary {
+  background: @secondary-clr;
+}
+
+.bg-success {
+  background: @brand-success;
+}
+
+.bg-info {
+  background: @brand-info;
+}
+
+.bg-warning {
+  background: @brand-warning;
+}
+
+.bg-danger {
+  background: @brand-danger;
+}
+
+.bg-other {
+  h2, h3, h4, h5, h6, p {
+    color: #fff;
+  }
+  position: relative;
+  > * {
+    z-index: 1;
+    position: relative;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 3000px;
+    height: 3000px;
+    right: 14px;
+    top: 0;
+    background: @brand-primary;
+    @media (max-width: 767px) {
+      right: inherit;
+      margin-left: -1000px;
+      height: 100%;
+    }
+  }
+}
+
+// Icons
+// -------------------------
+.icon-fa {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 24px;
+  background: @brand-primary;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  .transition(0.4s);
+}
+
+[class*='col-']:hover {
+  > .icon-fa {
+    background: #1c1c1c;
+  }
+}
+
+/*==================    Contact    ======================*/
+.contact {
+
+  dl * {
+    display: inline-block;
+    color: #fff;
+  }
+  dl + dl {
+    margin-top: 6px;
+  }
+  dt {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  dt + dd > a {
+    padding-left: 3px;
+  }
+  a {
+    font-weight: 700;
+    .transition(0.5s ease);
+    &:hover {
+      color: @default-darker;
+    }
+  }
+}
+
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin: (@line-height-computed * 2) 0 @line-height-computed;
+  border-bottom: 1px solid @page-header-border-color;
+}
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  li {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    a {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+    }
+  }
+}
+
+// List options
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Inline turns list items into inline-block
+/*=================   List Inline   =====================*/
+.list-inline {
+  .list-unstyled();
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/*==================    Index List  ======================*/
+
+.index-list {
+  counter-reset: li;
+  li {
+    position: relative;
+    &:nth-child(n+5) {
+      margin-top: 40px;
+    }
+
+    &:before {
+      position: relative;
+      color: #fff;
+      font-size: 65px;
+      line-height: 61px;
+      padding-bottom: 6px;
+      display: block;
+      content: counter(li, decimal-leading-zero);
+      counter-increment: li;
+    }
+    & + li {
+      margin-top: 15px;
+    }
+
+    p {
+      padding-right: 20px;
+    }
+
+    h3 + p {
+      margin-top: 8px;
+    }
+  }
+}
+
+.index-list2 {
+  color: #fff;
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+  counter-reset: li;
+  li {
+    .index-list_li_inset {
+      padding: 30px 15px 35px;
+    }
+    position: relative;
+    background: @brand-primary;
+    background-clip: content-box;
+
+    & + li {
+      margin-top: 0;
+    }
+
+    &:before {
+      position: relative;
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      text-indent: 6px;
+      color: #fff;
+      border: 2px solid #fff;
+      font-size: 30px;
+      line-height: 76px;
+      font-weight: 700;
+      content: counter(li, decimal) '.';
+      counter-increment: li;
+      text-align: center;
+      margin-top: 38px;
+    }
+    * + p {
+      margin-top: 16px;
+    }
+  }
+}
+
+/*============    Inline List     ================*/
+.inline-list {
+  display: inline-block;
+  color: #fff;
+
+  li {
+    display: inline-block;
+    .transition(0.4s ease);
+
+    .fa {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    a:hover {
+      color: @default-darker;
+    }
+    & + li {
+      margin-left: 7px;
+    }
+
+  }
+}
+
+/*==================    Marked List  ======================*/
+
+.marked-list {
+  display: inline-block;
+  li + li {
+    margin-top: 11px;
+  }
+  li {
+    position: relative;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    &:before {
+      content: '\f054';
+      font: 400 12px/24px 'FontAwesome';
+      position: absolute;
+      left: 0;
+      top: 0;
+      .transition(.4s ease);
+    }
+    &:hover {
+      &:before {
+        left: 3px;
+      }
+    }
+    a {
+      padding-left: 18px;
+      .transition(.4s ease);
+      &:hover {
+        color: @default-darker;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/*==================  Terms List  ======================*/
+.terms-list {
+  dt + dd {
+    margin-top: 10px;
+  }
+  dd + dt {
+    margin-top: 20px;
+  }
+  + a {
+    margin-top: 29px;
+    display: inline-block;
+    color: @brand-primary;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/*=================   Lists   =====================*/
+
+// Description Lists
+dl {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+}
+
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+dt {
+}
+
+dd {
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+.dl-horizontal {
+  dd {
+    &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    dt {
+      float: left;
+      width: (@dl-horizontal-offset - 20);
+      clear: left;
+      text-align: right;
+      .text-overflow();
+    }
+
+    dd {
+      margin-left: @dl-horizontal-offset;
+    }
+  }
+}
+
+// Misc
+// -------------------------
+
+// Abbreviations and acronyms
+abbr[title],
+  // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+}
+
+.initialism {
+  font-size: 90%;
+  .text-uppercase();
+}
+
+// Blockquotes
+blockquote {
+  margin: 0;
+  font-style: normal;
+  // font-size: @blockquote-font-size;
+  cite {
+    font-style: normal;
+    display: inline-block;
+  }
+  * + cite {
+    margin-top: 12px;
+  }
+  p{
+    padding: 0 90px;
+    @media (max-width: 1199px) {
+      padding: 0 10px;
+    }
+  }
+  q {
+    .clearfix();
+  }
+
+  & + blockquote {
+    margin-top: 35px;
+  }
+}
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid @blockquote-border-color;
+  border-left: 0;
+  text-align: right;
+
+  // Account for citation
+  footer,
+  small,
+  .small {
+    &:before {
+      content: '';
+    }
+    &:after {
+      content: '\00A0 \2014'; // nbsp, em dash
+    }
+  }
+}
+
+/*==================   Blockquote  ======================*/
+blockquote {
+  padding-top: 104px;
+  color: #fff;
+  p {
+    padding: 0 90px;
+    text-transform: uppercase;
+  }
+  * + cite.h5 {
+    margin-top: 30px;
+  }
+  cite {
+    color: #fff;
+  }
+  .h5 {
+    color: #fff;
+  }
+  &:before {
+    color: @brand-primary;
+    content: "";
+    // font: 700 92px/74px $default-font;
+    position: absolute;
+    top: 15.3%;
+    .transform(translateX(-50%));
+    left: 50%;
+    width: 27px;
+    height: 23px;
+    background: url(../images/q.png) no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+// Addresses
+address {
+  font-style: normal;
+}
+
+// Articles
+
+article {
+
+}
+
+//Figure
+//---------------
+
+figure {
+
+  figcaption {
+  }
+
+}
+
+.hidden {
+  overflow: hidden;
+}

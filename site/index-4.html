@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Contacts</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="css/mailform.css"/>
+    <link rel="stylesheet" href="css/material-design.css"/> 
+    <link rel="stylesheet" href="css/google-map.css">
+
+    <!--JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+
+
+    <!--[if lt IE 9]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+            <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script src='js/device.min.js'></script>
+
+      
+  </head>
+  <body>
+  <div class="page">
+  <!--========================================================
+                            HEADER
+  =========================================================-->
+      <header>
+          <div id="stuck_container" class="stuck_container">
+              <div class="container">
+                  <div class="navbar-header">
+                      <h1 class="navbar-brand">
+                          <a data-type='rd-navbar-brand' href="./">
+                              CEMENT
+                              <small>company</small>
+                          </a>
+                      </h1>
+                  </div>
+
+                  <nav class="navbar navbar-default navbar-static-top ">
+
+                    <ul class="navbar-nav sf-menu navbar-right" data-type="navbar">
+                        <li>
+                            <a href="./">Home</a>
+                        </li>
+                        <li class="dropdown active">
+                            <a href="index-1.html">About</a>
+                        </li>
+                        <li>
+                            <a href="index-2.html">Services</a>
+                        </li>
+                        <li>
+                            <a href="index-3.html">Products </a>
+                        </li>
+
+                        <li>
+                            <a href="index-4.html">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+              </div>
+          </div>
+      </header>
+  <!--========================================================
+                            CONTENT
+  =========================================================-->
+
+    <main>
+
+        <section class="map">
+            <div id="google-map" class="map_model"></div>
+            <ul class="map_locations">
+                <li data-x="-73.9874068" data-y="40.643180">
+                    <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45. <span>800 2345-6789</span></p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="well well__ins11 center991 bg-primary">
+            <div class="container ">
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <h3>Our contacts</h3>
+
+                        <div class="contact">
+                            <dl>
+                                <dt>Address:</dt>
+                                <dd>
+                                    4578 Marmora Road,Glasgow D04 89GR
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>Free Phone:</dt>
+                                <dd>
+                                    <a href='callto:#'>800-2345-6789</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>Hours:</dt>
+                                <dd>
+                                    Mon-Sat 8:00 am to 8:00 pm
+                                </dd>
+                            </dl>
+                        </div>
+                        <ul class="inline-list">
+                            <li>
+                                <a class="fa fa-facebook-square" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-twitter-square" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-google-plus-square" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-youtube-square" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-instagram" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <h3>Contact form</h3>
+
+                        <form class='mailform' method="post" action="bat/rd-mailform.php">
+                            <input type="hidden" name="form-type" value="contact"/>
+                            <fieldset>
+                                <label data-add-placeholder="">
+                                    <input type="text"
+                                           name="name"
+                                           placeholder="Name:"
+                                           data-constraints="@LettersOnly @NotEmpty"/>
+                                </label>
+
+                                <label data-add-placeholder="">
+                                    <input type="text"
+                                           name="phone"
+                                           placeholder="Phone:"
+                                           data-constraints="@Phone"/>
+                                </label>
+
+                                <label data-add-placeholder="">
+                                    <input type="text"
+                                           name="email"
+                                           placeholder="Email:"
+                                           data-constraints="@Email @NotEmpty"/>
+                                </label>
+
+                                <label class="textarea" data-add-placeholder="">
+                                                              <textarea name="message" placeholder="Message:"
+                                                                        data-constraints="@NotEmpty"></textarea>
+                                </label>
+
+                                <div class="mfControls">
+                                    <button class="btn btn-default" type="submit">Send</button>
+                                    <button class="btn btn-default" type="reset">clear</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+      <!--========================================================
+                              FOOTER
+      =========================================================-->
+
+      <footer>
+          <div class="footer-well">
+              <div class="container">
+                  <p class="copyright">
+                      Cement Company © <span id="copyright-year"></span>.
+                      <a href="index-5.html">Privacy Policy </a>
+                  </p>
+              </div>
+          </div>
+      </footer>
+
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/tm-scripts.js"></script>
+  <!-- </script> -->
+
+
+  </body>
+</html>

@@ -1,0 +1,302 @@
+﻿/*========================================================
+                        Camera
+=========================================================*/
+@import "mixins.less";
+@import "variables.less";
+
+@minHeight: 350px;
+@ratio: 0.3463414634146341;
+
+.camera_container {
+  position: relative;
+  padding-bottom: (@ratio * 100%);
+}
+
+.stuck_container + .camera_container {
+  margin-top: -106px;
+  @media (max-width: 1199px) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: (@minHeight / @ratio)) {
+  .camera_container {
+    padding-bottom: @minHeight;
+  }
+}
+
+.camera_wrap {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-bottom: 0 !important;
+  height: 100%;
+  background: #fff;
+  z-index: 0;
+}
+
+.camera_wrap img {
+  max-width: none !important;
+}
+
+.camera_fakehover {
+  height: 100%;
+  min-height: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.camera_src {
+  display: none;
+}
+
+.cameraCont, .cameraContents {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.cameraSlide {
+  .camera-abs();
+}
+
+.cameraContent {
+  .camera-abs();
+  display: none;
+}
+
+.camera_target {
+  .camera-abs();
+  overflow: hidden;
+  text-align: left;
+  z-index: 0;
+}
+
+.camera_overlayer {
+  .camera-abs();
+  overflow: hidden;
+  z-index: 0;
+}
+
+.camera_target_content {
+  .camera-abs();
+  overflow: hidden;
+  z-index: 2;
+}
+
+.camera_loader {
+  background: #fff url(../images/camera-loader.gif) no-repeat center;
+  border: 1px solid #ffffff;
+  border-radius: 18px;
+  height: 36px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  margin: -18px 0 0 -18px;
+  top: 50%;
+  width: 36px;
+  z-index: 3;
+}
+
+.camera_nav_cont {
+  height: 65px;
+  overflow: hidden;
+  position: absolute;
+  right: 9px;
+  top: 15px;
+  width: 120px;
+  z-index: 4;
+}
+
+.camerarelative {
+  overflow: hidden;
+  position: relative;
+}
+
+.imgFake {
+  cursor: pointer;
+}
+
+.camera_command_wrap .hideNav {
+  display: none;
+}
+
+.camera_command_wrap {
+  left: 0;
+  position: relative;
+  right: 0;
+  z-index: 4;
+}
+
+.showIt {
+  display: none;
+}
+
+.camera_clear {
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: -1px 0 25px;
+  position: relative;
+}
+
+.camera_caption {
+  display: none;
+}
+
+.cameraContent .camera_caption {
+  display: block;
+}
+
+.camera-abs() {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.camera_link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/*================   Custom Layout&Styles   =====================*/
+.camera_caption {
+  text-align: center;
+
+  > div {
+    height: 100%;
+  }
+
+  position: absolute;
+  max-width: 1170px;
+  top: 56.2%;
+  left: 50%;
+  width: 100%;
+  .transform(translate(-50%, -50%));
+
+  h1, h3, h4, h5, h6, p {
+    color: #fff;
+  }
+
+  h2 + h6 {
+    margin-top: 13px;
+  }
+
+  @media (max-width: 1199px) {
+    width: 80%;
+    top: 50%;
+  }
+
+  @media (max-width: 479px) {
+    h2 {
+      font-size: 38px;
+    }
+
+    h6 {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+}
+
+.camera_pag {
+  &_ul {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      line-height: 8px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background: #888;
+      .transition(.3s all ease);
+
+      &.cameracurrent, &:hover {
+        background: #333;
+      }
+
+      & + li {
+        margin-left: 4px;
+      }
+
+      > span {
+        display: none;
+      }
+    }
+  }
+}
+
+.camera_next, .camera_prev {
+  position: absolute;
+  top: 54.8%;
+  width: 42px;
+  height: 42px;
+  font: 400 38px/42px @fa;
+  text-align: center;
+  background: @brand-primary;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s all ease;
+  z-index: 10;
+  @media (max-width: 1199px) {
+    top: 50%;
+    margin-top: -21px;
+  }
+}
+
+.camera_next:hover, .camera_prev:hover {
+  background: #1c1c1c;
+}
+
+.camera_next {
+  text-indent: 2px;
+  right: 7.9%;
+}
+
+.camera_next:before {
+  content: '\f105';
+}
+
+.camera_prev {
+  text-indent: -2px;
+  left: 7.9%;
+}
+
+.camera_prev:before {
+  content: '\f104';
+}
+
+@media (max-width: 1199px) {
+  .camera_next {
+    right: 2%;
+  }
+
+  .camera_prev {
+    left: 2%;
+  }
+}
+
+@media (max-width: 767px) {
+  .camera_prev, {
+    display: none;
+  }
+
+  .camera_next, {
+    display: none;
+  }
+}
