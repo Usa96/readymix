@@ -55,6 +55,23 @@ section#counter-stats {
             margin-bottom: 10px;
         }
 
+        @font-face {
+            font-family: 'Montserrat-Arabic Light'; /* Give your font a name */
+            src: url('fonts/Montserrat_fonts/Montserrat-Arabic\ Light\ 300.otf') format('opentype'); /* Specify the path to your font file */
+            /* You can add more font formats (e.g., woff, woff2) for better browser compatibility */
+        }
+        
+        /* Apply the custom font to elements */
+        body, h1, h2, h3, h4, h5, h6, p {
+            font-family: 'Montserrat-Arabic Light', Arial, sans-serif; /* Use your custom font as the default font */
+        }
+        .map {
+            width: 100%; /* Make the map cover the entire width of its container */
+            margin: 0; /* Remove any default margin */
+            padding: 0; /* Remove any default padding */
+        }
+
+
     </style>
 
 
@@ -78,25 +95,22 @@ section#counter-stats {
 
                     <ul class="navbar-nav sf-menu navbar-right" data-type="navbar">
                         <li class="active">
-                            <a href="index.html">Home</a>
+                            <a href="#Home">Home</a>
                         </li>
                         <li>
-                            <a href="#">About</a>
+                            <a href="#About">About</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#Products">Products </a>
                         </li>
                         <li>
-                            <a href="#">Products </a>
-                        </li>
-                        <li>
-                            <a href="#">Contacts</a>
+                            <a href="#Contact">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="camera_container ">
+        <div id="Home" class="camera_container ">
             <div id="camera" class="camera_wrap">
                 <div data-src="images/page-1_slide01.jpg">
                     <div class="camera_caption fadeIn">
@@ -142,7 +156,7 @@ section#counter-stats {
 
     <main>
 
-        <section class="bg-dark center767">
+        <section id="About" class="bg-dark center767">
             <div class="container">
                 <div class="row">
                     <div class="well well__ins1 col-lg-12 col-md-9 col-sm-6 col-xs-6" style="text-align: justify;">
@@ -227,7 +241,7 @@ section#counter-stats {
             </div>
         </section>
 
-        <section class="well center767">
+        <section id="Products" class="well center767">
             <div class="container bg-white">
                 <h3>Our Products</h3>
 
@@ -300,7 +314,7 @@ section#counter-stats {
             <p><a class="cta-button" href="mailto:sales@eurormc.com" style="text-decoration: none; color: inherit;">Get Started</a></p>
         </div>
 
-        <section class="well well__ins11 center991 bg-primary" style="padding: 20px 0;">
+        <section id="Contact" class="well well__ins11 center991 bg-primary" style="padding: 20px 0;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-sm-12 col-xs-12">
@@ -311,8 +325,8 @@ section#counter-stats {
                                 </a>
                             </div>
                             <div class="footer-text">
-                                <p style="color: #ffffff; font-size: 14px;">
-                                    European RMC is a leading concrete solutions provider in Kuwait, operating state-of-the-art plants in Multaa and Sualibia. With a combined capacity of over 20,000 m³ monthly, expandable to 30,000 m³, we ensure top-quality concrete at competitive prices for all your construction needs.
+                                <p style="color: #ffffff; font-size: 14px; text-align: justify;">
+                                    European Concrete Ready Mix Company (ECRM) was established in 2004 and is emerging to be one of the most competent Ready Mix suppliers in Kuwait. European RMC, a leading concrete solutions provider in Kuwait, operates state-of-the-art plants in Multaa and Sualibia. With a combined capacity of over 20,000 m³ monthly, expandable to 30,000 m³, we ensure top-quality concrete at competitive prices for all your construction needs.
                                 </p>
                             </div>
                         </div>
@@ -333,7 +347,7 @@ section#counter-stats {
                                 </dd>
                             </dl>
                         </div>
-                        <ul class="inline-list" style="padding: 0; list-style: none; margin-top: 15px;">
+                        <!-- <ul class="inline-list" style="padding: 0; list-style: none; margin-top: 15px;">
                             <li style="display: inline; margin-right: 10px;">
                                 <a class="fa fa-facebook-square" href="#" style="color: #ffffff; font-size: 24px;"></a>
                             </li>
@@ -349,7 +363,7 @@ section#counter-stats {
                             <li style="display: inline; margin-right: 10px;">
                                 <a class="fa fa-instagram" href="#" style="color: #ffffff; font-size: 24px;"></a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
@@ -373,13 +387,11 @@ section#counter-stats {
             </div>
         </div>
         <div class="map mg_add">
-            <div id="google-map" class="map_model"></div>
-            <ul class="map_locations">
-                <li data-x="47.9774" data-y="29.3759">
-                    <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45. <span>800 2345-6789</span></p>
-                </li>
-            </ul>
+            <div id="google-map" class="map_model" style="width: 100%;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.0161597036167!2d47.96840487615643!3d29.369816050217743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf858e1fe13947%3A0x6c1b720c229e4612!2sSanam%201%20Tower!5e0!3m2!1sen!2skw!4v1717956451462!5m2!1sen!2skw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
+          
     </footer>
 
 </div>
