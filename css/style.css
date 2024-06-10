@@ -54,7 +54,7 @@
   line-height: 47px!important;
   font-weight: 700;
   color: #fff!important;
-  background: red;
+  background: #0094D9;;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -601,7 +601,7 @@ BODY {
 
 .promo-box-container .cta-button:hover {
   color: #000;
-  background-color: red;
+  background-color: #0094D9;;
 }
 
 @media all and (max-width: 600px) {
