@@ -396,3 +396,11 @@ $('.counting').each(function() {
     
   
   });   
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const parallaxSection = document.querySelector('.custom-parallax-section');
+    const imageUrl = parallaxSection.getAttribute('data-url');
+    if (imageUrl) {
+        parallaxSection.style.backgroundImage = `url(${imageUrl})`;
+    }
+});

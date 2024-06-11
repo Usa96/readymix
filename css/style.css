@@ -643,3 +643,64 @@ BODY {
   }
 }
 
+/* Ensure the container takes up the full viewport */
+.camera_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* Ensure the camera wrap takes up the full height and width of the container */
+.camera_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom parallax section class */
+.custom-parallax-section {
+  position: relative;
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Parallax effect */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  height: 100vh; /* Sets the section to cover the full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Ensures text stands out on the background */
+  text-align: center;
+  overflow: hidden; /* Prevents overflow issues */
+  z-index: 1; /* Places the section in front of other elements */
+}
+
+/* Custom container class within the parallax section */
+.custom-parallax-section .custom-container {
+  z-index: 2; /* Ensures content is above the background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 767px) {
+  .custom-parallax-section {
+      background-attachment: scroll; /* Disable parallax effect on mobile */
+      height: auto; /* Adjust height as needed for mobile */
+  }
+}
+
+#Contact {
+  /* Add your margin top value here */
+  margin-top: 10vh; /* Example value */
+}
+
+/* For viewport up to 767px */
+@media (max-width: 767px) {
+  #Contact {
+      /* Add your margin top value here for smaller screens */
+      margin-top: 30vh; /* Example value */
+  }
+}
